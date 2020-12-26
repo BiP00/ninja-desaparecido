@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja Desaparecido</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1>Gatos Desaparecidos</h1>
+    <button type="button" class="boton">Restaurar</button>
+    <br>
+    <div class="gato" id="gato1a"><img src="gato1.jpg" alt=""></div>
+    <div class="gato" id="gato4a"><img src="gato4.jpg" alt=""></div>
+    <div class="gato" id="gato2a"><img src="gato2.jpg" alt=""></div>
+    <div class="gato" id="gato3a"><img src="gato3.jpg" alt=""></div>
+    <div class="gato" id="gato3b"><img src="gato3.jpg" alt=""></div>
+    <div class="gato" id="gato2b"><img src="gato2.jpg" alt=""></div>
+    <div class="gato" id="gato4b"><img src="gato4.jpg" alt=""></div>
+    <div class="gato" id="gato1b"><img src="gato1.jpg" alt=""></div> <br>
+  </div>
+  <script>
+    $(document).ready(function () {
+      var a = 0;
+      var b = 0;
+      var c = 0;
+      var d = 0;
+
+      $(document).on("click", "#gato1a, #gato1b", function () {
+        a++;
+        if (a%2 === 0) {
+          $("#gato1a, #gato1b").fadeOut("slow");
+        }
+      });
+
+      $(document).on("click", "#gato2a, #gato2b", function () {
+        b++;
+        if (b%2 === 0) {
+          $("#gato2a, #gato2b").fadeOut("slow");
+        }
+      });
+
+      $(document).on("click", "#gato3a, #gato3b", function () {
+        c++;
+        if (c%2 === 0) {
+          $("#gato3a, #gato3b").fadeOut("slow");
+        }
+      });
+
+      $(document).on("click", "#gato4a, #gato4b", function () {
+        d++;
+        if (d%2 === 0) {
+          $("#gato4a, #gato4b").fadeOut("slow");
+        }
+      });
+
+      $(document).on("click", ".boton", function () {
+        $("#gato1a, #gato1b, #gato2a, #gato2b, #gato3a, #gato3b, #gato4a, #gato4b").fadeIn("slow");
+      });
+
+    })
+  </script>
+</body>
+
+</html>
